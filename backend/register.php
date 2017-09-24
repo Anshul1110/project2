@@ -4,16 +4,20 @@
     header('Access-Control-Allow-Methods: GET, POST, OPTIONS');
     include('db_connect.php');   
     include('random.php');   
-    include('MAIL/PHPMailerAutoload.php');
-    $user = json_decode(file_get_contents('php://input'), true);
     // Check connection
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     };
+
+    //This is the line to get JS object sent by...yaha tk humne $http (AngularJS - Client side) se server (PHP) pe request bheji h aur json_decode se usko PHP ke use ke liye convert kiya hai, (json object -> PHP Array)ohkk 
+    $user = json_decode(file_get_contents('php://input'), true);
+
     $message = array();
     $message["result"] = false;
-    
-    checkIfUserExists($user, $conn);
+    $message["user"] = $user;
+
+    echo json_encode($message);
+  /*  checkIfUserExists($user, $conn);
     function checkIfUserExists($user, $conn){
         $uname = $user['uname'];
         $query  =  "SELECT l_id
@@ -73,7 +77,7 @@
                         FROM $table
                         WHERE $ref_field = '$refCode'";
             $result = $conn->query($query);  
-           /* if ($result->num_rows > 0) {
+            if ($result->num_rows > 0) {
                 while($row = $result->fetch_assoc()) {
                     $arr[] = $row;
                 }
@@ -95,7 +99,7 @@
                                     );
                 $stmt->execute();
             }
-        }*/
+        }
         if( $user['pass'] == $user['cpass']){
             $l_id = $user['id'];
             $l_user = $user['user'];
@@ -164,6 +168,6 @@
             $message['mailsent'] = true;
         }
         echo json_encode($message);
-    }
+    }*/
     $conn->close();
 ?>
