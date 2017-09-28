@@ -1,0 +1,27 @@
+user registration and link via nodes
+*************************************************
+
+similar to referral system
+user registers via fb/google, and adds people under him (links/referrals)
+
+there are levels in nodes
+level 1 - 5 nodes, 25000 credits, Max 7 links to level 2(referrals)
+level 2 - 10 nodes, 10000 credits, Max 35 links to level 3 (referrals)
+level 3 - 50 nodes, 5000 credits, Max 70 links to level 4(referrals)
+level 4 - 100 nodes, 1000 credits, etc..
+
+after register, user is given
+level 1
+
+after 5 registrations, error saying level 1 is full, adding to level 2, after level 2 full, level 3, etc
+
+make database for user and links, refer referral system functionlity of 
+https://github.com/anuragsr/Member-Registration/tree/dev
+
+*************************************************
+Most importantly, be available in your working hours, respect time(mine and yours), and if stuck/lost/confused/doubtful please ASK!
+
+
+
+
+
