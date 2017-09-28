@@ -1,36 +1,41 @@
 <div class="container-fluid">
-    <div class="row text-center"> 
-        <div class="col-md-4">
-        </div>      
-        <div class="col-md-4">
-          <div class="row">
-              <div class="col-md-12">
-                  <button class="btn btn-default btn-block btn-lg" ng-click="doLogin('Online Entrepreneur')">Entrepreneur Login/Register</button>
-              </div>
-          </div>
-         <!--  <div class="form-group">
-          <div class="col-md-12">
-            <button class="btn btn-primary" ng-click="login()">Login</button>
-            <button class="btn btn-default" ng-click="register()">Register</button>
-          </div>
-        </div> -->
-         <!--  <div class="row">
-              <div class="col-md-12">
-                  <button class="btn btn-default btn-block btn-lg" ng-click="doLogin('Customer')">Customer</button>
-              </div>
-          </div>
-          <div class="row">
-              <div class="col-md-12">
-                  <button class="btn btn-default btn-block btn-lg" ng-click="doLogin('Merchant')">Merchant</button>
-              </div>
-          </div>
-          <div class="row">
-              <div class="col-md-12">
-                  <button class="btn btn-default btn-block btn-lg" ng-click="doLogin('Admin')">Admin</button>
-              </div>
-          </div> -->
-        </div>     
-        <div class="col-md-4">
+     <div class="row text-center">
+    <div class="main">
+
+      <h3>Please Log In, or <a href="#">Sign Up</a></h3>
+      <div class="row">
+        <div class="col-xs-6 col-sm-6 col-md-6">
+          <a href="#" fb-login type="button" class="btn btn-lg btn-primary btn-block">Facebook</a>
         </div>
+        <div class="col-xs-6 col-sm-6 col-md-6" ">
+          <a href="#"  g-login type="button" class="btn btn-lg  btn-block" style="background: #dd4b39; color: white;">Google</a>
+        </div>
+      </div>
+      <div class="login-or">
+        <hr class="hr-or">
+        <span class="span-or">or</span>
+      </div>
+
+      <form role="form">
+   <!--      <div class="form-group">
+          <label for="inputUsernameEmail" class="pull-left">Username or email</label>
+          <input type="text" class="form-control" id="inputUsernameEmail">
+        </div>
+        <div class="form-group">
+          <a class="pull-right" href="#">Forgot password?</a>
+          <label for="inputPassword" class="pull-left">Password</label>
+          <input type="password" class="form-control" id="inputPassword">
+        </div> -->
+        
+        <button type="submit" class="btn btn btn-primary btn-lg btn-block pull-left" ng-click="login()">
+          Log In
+        </button>
+        <div class="row" style="padding-top: 100px;">
+        <a href="#" ng-click="register()">New User?? Register here</a>
+         </div>     
+      </form>
+    
     </div>
+    
+  </div>
 </div>      
