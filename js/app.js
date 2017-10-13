@@ -5,24 +5,25 @@ var app = angular.module('app', ['ui.router', 'socialLogin', '720kb.socialshare'
 
 app.config(function($stateProvider, $urlRouterProvider) {
 
-  $urlRouterProvider.otherwise("/home");
+  $urlRouterProvider.otherwise("/home/");
 
     $stateProvider
     .state('home', {
-      url: "/home",
+      url: "/home/:ref",
+      params:{ref:null},
       templateUrl: "templates/home.html",
       controller: 'HomeCtrl'
     })
 
     .state('register', {
       url: "/register",
-      params : {user:null},
+      params : {user:null, ref:''},
       controller: 'RegCtrl',
       templateUrl: "templates/register.html"
     })
     .state('login', {
       url: "/login",
-      params:{role:null},
+      params:{user:null},
       controller: 'LoginCtrl',
       templateUrl: "templates/login.html"
     })

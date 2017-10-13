@@ -1,0 +1,96 @@
+<<<<<<< HEAD
+user registration and link via nodes
+=======
+kya puchna hau wo bata user registration and link via nodes
+>>>>>>> 7bacfa96cfaf7484bad173ec9525d306038e7128
+*************************************************
+
+similar to referral system
+user registers via fb/google, and adds people under him (links/referrals)
+
+there are levels in nodes
+level 1 - 5 nodes, 25000 credits, Max 7 links to level 2(referrals)
+level 2 - 10 nodes, 10000 credits, Max 35 links to level 3 (referrals)
+level 3 - 50 nodes, 5000 credits, Max 70 links to level 4(referrals)
+level 4 - 100 nodes, 1000 credits, etc..
+
+after register, user is given
+level 1
+
+after 5 registrations, error saying level 1 is full, adding to level 2, after level 2 full, level 3, etc
+
+make database for user and links, refer referral system functionlity of 
+https://github.com/anuragsr/Member-Registration/tree/dev
+
+*************************************************
+Most importantly, be available in your working hours, respect time(mine and yours), and if stuck/lost/confused/doubtful please ASK!
+
+
+
+<<<<<<< HEAD
+
+
+//This is the line to get JS object sent by...yaha tk humne $http (AngularJS - Client side) se server (PHP) pe request bheji h aur json_decode se usko PHP ke use ke liye convert kiya hai, (json object -> PHP Array)ohkk ab yaha se mj value db daaldunga right ?? query likh kr haan insert ? which else? fir uske baad login me bh same insert krke value ,,,, naopnde login ki details register ko kese ?feck baar reg ho gaya to teeno details stored hai uske baad nahi store karna hai, login par username aur password match karna hai select statement use karke... isi type ka function? haan...boss gussa mat hona dheere dheere samajh ati hmj ..:Paur kuch pucxhna h?nh nh me ye krta hu ....pehle....ancha 1 baat ....1 baar git bh check krlo mera sahi kiya kya? haan dekha hai sahi hai ...or meri branch se git upstream kese set krte h chalo wo baad me krta hu ...ok...
+theek h aap apna kaam kro ... thank u chalk bata hone ke baad fir apan databse me changes karenge for fb and google login...matlab 1 hi table se register bh login bh and fb google oath bh ..? dekhte hain kya best rahega, ye wala kar le pehleha ha ha..ohkk chal bye7+
+=======
+ab bata isko connect kaise kare? if (mysqli_query($connect,$query))
+
+php kaise run karte hain apan pc pe?wamp server se ? kar wo
+
+next step?...boss baatao na 
+:P
+ wamp ka c drive me folder hota hai www uusme apna project copy paste kararee haan
+ register ka state bana hai? yee
+>>>>>>> 7bacfa96cfaf7484bad173ec9525d306038e7128
+
+
+tereko aisa lag raha hai kya ki pata nahi kya bana raha hun main?
+nh nh 
+ye hum share referal banarahe h....jese
+ 
+ u
+ b
+
+ e
+
+ nahi overall?
+ nh nh ..ye pata h ye seekh gaya to maza ajaega shayad.....
+ mereko honestly % wise tbhaotda akitna smajah ....0 bhi chalega 30 to seekha hu boss..achese....
+ kisme sabse jyada confidence hai?....design kr pata hu...functionality me dunga time to ajaega ye samjh agaya meko...
+ kayi baar dono interlinked hote hain, abhi full static bana hai humne, with simple anims
+ jo buttons banwaye hai us pure area me main threejs lagaunga...ye kya h threejs?
+ kuch time pehle mast mast porfolio dikhaye the tune 3d ke maine boloa tha threejs me banega ye sab
+ tu iss par concentrate kar, roughly 
+
+ similar to referral system
+user registers via fb/google, and adds people under him (links/referrals)
+
+there are levels in nodes
+level 1 - 5 nodes, 25000 credits, Max 7 links to level 2(referrals)
+level 2 - 10 nodes, 10000 credits, Max 35 links to level 3 (referrals)
+level 3 - 50 nodes, 5000 credits, Max 70 links to level 4(referrals)
+level 4 - 100 nodes, 1000 credits, etc..
+
+after register, user is given
+level 1
+
+after 5 registrations, error saying level 1 is full, adding to level 2, after level 2 full, level 3, etc
+
+^
+
+This is a prototype for a game..
+functionalities wahi hain jo ab tak discuss ki hai..buttons wale area me pure database ka 3d me representation hoga
+isliye i want you to thoroughly understand what we are doing, what your role is..
+sab work karega sahi se tabhi main kuch aage bana paunga get it?..ji boss
+and ye sab jo tu bana raha hai, ye industry me almost har project me kisi na kisi form me use hota hai, exp se bata raha hun...ha ha ha..sahi ....kbhi gaya hi nh ofc...no ind exp... exactly, so think about it as a way to learn what exactly is going on...haan boss.
+.andar se jyada dhyaan dene laga hu...and even suggest karunga ki main jab nahi milta/reply karta (again, many tasks in hand) to tereko deisgn pasand hai, anim pasand hai bana kuch bhi seekh exp kar ye aisa hi field hai dost...haan aj bh js ki code academy se..
+
+tu js samjhega tab apne kal wale rgb error pe hasega :P....ha ha ha...theek h boss..padhta hu me...and sharelink wala bh samajhta hu ...2 task today.., and ye bhi soch, far thought, but agar koi bhi idea/game apan sahi bana ke launch kare aur wo chal jaye then?...abhi to boss mj seekhne hi do.... development achese seekhna h mj...bilkul core.. me thoda bht deta rahunga advice...:P
+
+abe, ye koi alag statement nahi tha, jo tu kar raha hai usi context me, chodd
+
+binbaana abhi,  ..bina maal k hu na ..to trip nh samjh pata hu,...pune ajata hu thode din k liye ...ha ha h
+a
+apni trip sponsor kar sake fir aa :P....seekhne araha hu .....company itna to kare mere liye training allowance.. .haha
+
+nice imagination :) chal bata kuch doubt aye fir...theek h bosss

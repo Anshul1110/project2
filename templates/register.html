@@ -11,11 +11,20 @@
 <div class="col-md-4">
 			<form class="form-horizontal">
 				<div class="form-group">
-					<label class="col-md-4 control-label">Name</label>  
+					<label class="col-md-4 control-label">First Name</label>  
 					<div class="col-md-8">
 						<div class="input-group">
 							<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-							<input placeholder="name" ng-model="user.name" class="form-control" type="text">
+							<input placeholder="name" ng-model="user.fname" class="form-control" type="text">
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-md-4 control-label">Last Name</label>  
+					<div class="col-md-8">
+						<div class="input-group">
+							<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+							<input placeholder="name" ng-model="user.lname" class="form-control" type="text">
 						</div>
 					</div>
 				</div>
@@ -46,7 +55,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="form-group">
+			<div class="form-group">
 				<label class="col-md-4 control-label">Email</label>  
 				<div class="col-md-8">
 					<div class="input-group">
@@ -55,40 +64,45 @@
 					</div>
 				</div>
 			</div>
+			<div class="form-group">
+				<label class="col-md-4 control-label">Age</label>  
+				<div class="col-md-8">
+					<div class="input-group">
+						<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+						<input placeholder="Your Age" ng-model="user.a" class="form-control" type="text">
+					</div>
+				</div>
+			</div>
+			      <div class="form-group">
+                    <label class="control-label col-md-4">Gender</label>
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label class="radio-inline">
+                                    <input type="radio" id="femaleRadio" value="Female" ng-model="user.g">Female
+                                </label>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="radio-inline">
+                                    <input type="radio" id="maleRadio" value="Male" ng-model="user.g">Male
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+					<label class="col-md-4 control-label">Referral Code</label>
+					<div class="col-md-8">
+					<div class="input-group ">
+					  <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" ng-disabled="disableRef" ng-model="user.ref">
+					</div>
+				</div>
+				</div>
 				<div class="form-group">
-				<div class="col-md-12">
-					<button class="btn btn-primary" ng-click="register()">Register</button>
-				</div>
-			</div>		<!-- <div class="col-md-6">
-			<div class="form-group">
-				<label class="col-md-4 control-label">Name</label>  
-				<div class="col-md-8">
-					<div class="input-group">
-						<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-						<input placeholder="Name" ng-model="user.name" class="form-control" type="text">
+					<div class="col-md-12">
+						<button class="btn btn-primary" ng-click="register()">Register</button>
 					</div>
-				</div>
-			</div><br>
-			<div class="form-group">
-				<label class="col-md-4 control-label">Username</label>  
-				<div class="col-md-8">
-					<div class="input-group">
-						<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-						<input placeholder="Username" ng-model="user.u" class="form-control" type="text">
-					</div>
-				</div>
-			</div>
-			
-			<div class="form-group">
-				<label class="col-md-4 control-label">Password</label>  
-				<div class="col-md-8">
-					<div class="input-group">
-						<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-						<input placeholder="Password" ng-model="user.p" class="form-control" type="password">
-					</div>
-				</div>
-			</div>
-			 -->
+			</div>		
 		</div>
 		<div class="col-md-4"></div>
 	</div>

@@ -15,41 +15,70 @@
 
     function login($user, $conn){
     $message["user"] = $user;
-    
-
     $u = $user['u'];
     $p = md5($user['p']);
-    
     $arr = array();
     $message = array();
     $message["result"] = false;
-
     //har code kisi scenario ke liye likha hua hai
     $query  =  "SELECT *
                 FROM login
                 WHERE l_user = '$u'
                 AND l_pass = '$p'";
     $result = $conn->query($query);
-      //runs the query and put the resulting data into a variable
-    /*$message["query"] = $query;*/
-    if ($result->num_rows > 0) {   //checks if there are more than zero rows returned.
-        //output data of each row
+         if ($result->num_rows > 0) {  
         while($row = $result->fetch_assoc()) {
-            // fetch_assoc() puts all the results into an associative array that we can loop through
-            //while() loop loops through through the result set and output the data from the id
             $arr[] = $row;
         }
     }
-     if(count($arr) > 0){
-        $message["message"] = "Login Successful.";
-        $message["result"] = true;
-        $message["user"] = $arr[0];
-        echo json_encode($message);
+    if(count($arr) > 0){
+        $u_id = $arr[0]['u_id'];
+        unset($arr); 
+        $arr = array();
+        $query  =  "SELECT *
+                    FROM user
+                    WHERE u_id = '$u_id'";
+        $result = $conn->query($query);
+        //return result in this line
+        if ($result->num_rows > 0) {   
+            while($row = $result->fetch_assoc()) {
+                $arr[] = $row;
+            }
+            $message["message"] = "Login Successful.";
+            $message["result"] = true;
+            $message["user"] = $arr[0];
+             
+            $table = 'user';
+            $db_id = $arr[0]['u_id'];
+            $id_field = 'u_id';
+            $userArr = array();
+            $query  =  "SELECT r_child_id
+                        FROM referral
+                        WHERE r_parent_id = '$db_id'";
+            $result = $conn->query($query);  
+            if ($result->num_rows > 0) {
+                while($row = $result->fetch_assoc()) {
+                    $arr = array();
+                    $id = $row["r_child_id"];
+                    $query  =  "SELECT *
+                        FROM $table
+                        WHERE $id_field = '$id'";
+                    $newresult = $conn->query($query);
+                    while($newrow = $newresult->fetch_assoc()) {
+                        $arr[] = $newrow;
+                    }
+                    $userArr = $arr;
+                }
+            }   
+            $message['user']['referrals'] = $userArr;
+            echo json_encode($message); 
+        }else{
+            echo $u_id;
+        }
     } else{
         $message["message"] = "Wrong User ID/Password.";
         echo json_encode($message);
     }
 }
-
 $conn->close();
 ?>
